@@ -1,0 +1,40 @@
+{
+  "name": "dark-fangs",
+  "displayName": "Dark Fangs",
+  "description": "VS Code theme made by dfangs",
+  "version": "1.0.0",
+  "publisher": "dfangs",
+  "license": "MIT",
+  "icon": "",
+  "galleryBanner": {
+    "color": "#1b1f23",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dfangs/dark-fangs-theme"
+  },
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Dark Fangs",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark-fangs.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "vsce": "^2.0.0"
+  },
+  "scripts": {
+    "package": "vsce package -o ./build",
+    "login": "vsce login dfangs",
+    "publish": "vsce publish"
+  }
+}
