@@ -1,4 +1,8 @@
 .vscode/**
 .vscode-test/**
-.gitattributes
+.github/
 .gitignore
+/node_modules/
+/package-lock.json
+/src/
+/build/
