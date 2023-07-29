@@ -1,40 +1,50 @@
 {
-  "name": "dark-fangs",
-  "displayName": "Dark Fangs",
-  "description": "VS Code theme made by dfangs",
-  "version": "1.0.0",
-  "publisher": "dfangs",
-  "license": "MIT",
-  "icon": "",
-  "galleryBanner": {
-    "color": "#1b1f23",
-    "theme": "dark"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dfangs/dark-fangs-theme"
-  },
-  "engines": {
-    "vscode": "^1.72.0"
-  },
-  "categories": [
-    "Themes"
-  ],
-  "contributes": {
-    "themes": [
-      {
-        "label": "Dark Fangs",
-        "uiTheme": "vs-dark",
-        "path": "./themes/dark-fangs.json"
-      }
-    ]
-  },
-  "devDependencies": {
-    "vsce": "^2.0.0"
-  },
-  "scripts": {
-    "package": "vsce package -o ./build",
-    "login": "vsce login dfangs",
-    "publish": "vsce publish"
-  }
+    "name": "dark-fangs",
+    "displayName": "Dark Fangs",
+    "description": "VS Code theme made by dfangs",
+    "version": "1.0.0",
+    "publisher": "dfangs",
+    "license": "MIT",
+    "icon": "",
+    "galleryBanner": {
+        "color": "#1b1f23",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dfangs/dark-fangs"
+    },
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "theme",
+        "dark"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Dark Fangs",
+                "uiTheme": "vs-dark",
+                "path": "./themes/dark-fangs.json"
+            }
+        ]
+    },
+    "type": "module",
+    "devDependencies": {
+        "@types/chroma-js": "^2.4.0",
+        "@types/node": "^20.4.5",
+        "@vscode/vsce": "^2.19.0",
+        "chroma-js": "^2.4.2",
+        "rome": "^12.1.3",
+        "typescript": "5.1.6"
+    },
+    "scripts": {
+        "build": "tsc && node ./build/main.js",
+        "package": "npm run build && vsce package -o ./build/dark-fangs.vsix",
+        "publish": "npm run build && vsce publish"
+    }
 }
