@@ -1,6 +1,6 @@
+import chroma from "chroma-js";
 import { Theme } from "../types.js";
 import { GITHUB_DARK } from "./github.js";
-import chroma from "chroma-js";
 
 const PALETTE = {
 	red: chroma("#e06c75"),
@@ -177,6 +177,7 @@ export const DARK_FANGS: Theme = {
 			},
 		},
 		{
+			name: "JSON property names",
 			scope: ["support.type.property-name"],
 			settings: {
 				foreground: PALETTE.red,
